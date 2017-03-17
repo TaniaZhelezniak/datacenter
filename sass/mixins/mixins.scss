@@ -1,0 +1,88 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-effect {
+  opacity: .8;
+}
+
+@mixin arrow-dropdown($degree) {
+  border-left: 1px solid $gray;
+  border-top: 1px solid $gray;
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  margin: .3rem;
+  transform: rotate($degree);
+  height: .4rem;
+  width: .4rem;
+}
+
+@mixin arrow($width, $direction:right) {
+  width: $width;
+  height: .25rem;
+  margin: 0;
+  position: absolute;
+  z-index: 10;
+  background: $gradient-light;
+
+  @if $direction == both {
+	&.bx-prev:before, &.bx-next:after  {
+	  content: '';
+	  position: absolute;
+	  top: -70%;
+	  width: .65rem;
+	  display: block;
+	  border-radius: 50%;
+	  height: .65rem;
+	  background: $gradient-light;
+	}
+
+	&.bx-prev:before {
+	  left: -.1rem;
+	}
+
+	&.bx-next:after {
+	  right: -.1rem;
+	}
+  } @else {
+	&:after {
+	  content: '';
+	  position: absolute;
+	  top: -70%;
+	  right: -.1rem;
+	  width: .65rem;
+	  display: block;
+	  border-radius: 50%;
+	  height: .65rem;
+	  background: $gradient-light;
+	}
+  }
+}
+
+@mixin gray-line($left) {
+  content: '';
+  display: block;
+  position: relative;
+  left: $left;
+  width: .2rem;
+  height: 6rem;
+  background: $gray-light;
+}
+
+@mixin back-gradient($width, $top, $right, $bottom, $from, $to) {
+  &:after {
+	opacity: .8;
+	width: $width;
+	content: '';
+	height: 100%;
+	z-index: 5;
+	position: absolute;
+	top:$top;
+	right:$right;
+	bottom: $bottom;
+	background: linear-gradient(to right, $from, $to);
+  }
+}
