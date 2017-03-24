@@ -4,6 +4,20 @@
   align-items: center;
 }
 
+@mixin flex-stretch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+@mixin flex-stretch-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 @mixin hover-effect {
   opacity: .8;
 }
@@ -14,7 +28,7 @@
   content: "";
   display: inline-block;
   vertical-align: top;
-  margin: .3rem;
+  margin: .5rem .3rem;
   transform: rotate($degree);
   height: .4rem;
   width: .4rem;
@@ -23,66 +37,73 @@
 @mixin arrow($width, $direction:right) {
   width: $width;
   height: .25rem;
-  margin: 0;
+  margin: 1rem 0;
+  display: block;
   position: absolute;
   z-index: 10;
   background: $gradient-light;
 
-  @if $direction == both {
-	&.bx-prev:before, &.bx-next:after  {
+  @if $direction == left {
+	&:before {
 	  content: '';
 	  position: absolute;
-	  top: -70%;
-	  width: .65rem;
+	  top: -.25rem;
+	  left: -.1rem;
+	  width: .75rem;
 	  display: block;
 	  border-radius: 50%;
-	  height: .65rem;
+	  height: .75rem;
 	  background: $gradient-light;
-	}
-
-	&.bx-prev:before {
-	  left: -.1rem;
-	}
-
-	&.bx-next:after {
-	  right: -.1rem;
 	}
   } @else {
 	&:after {
 	  content: '';
 	  position: absolute;
-	  top: -70%;
+	  top: -.25rem;
 	  right: -.1rem;
-	  width: .65rem;
+	  width: .75rem;
 	  display: block;
 	  border-radius: 50%;
-	  height: .65rem;
+	  height: .75rem;
 	  background: $gradient-light;
 	}
   }
 }
 
-@mixin gray-line($left) {
-  content: '';
-  display: block;
-  position: relative;
-  left: $left;
-  width: .2rem;
-  height: 6rem;
-  background: $gray-light;
+@mixin gray-line-mix($left) {
+  .gray-line {
+	//content: '';
+	position: relative;
+	left: $left;
+	width: .3rem;
+	margin: 1rem;
+	height: 6rem;
+	display: block;
+	background: $gray-light;
+
+	&:after {
+	  content: '';
+	  position: absolute;
+	  bottom: 0;
+	  left: -.25rem;
+	  width: .75rem;
+	  height: .75rem;
+	  display: block;
+	  border-radius: 50%;
+	  background: $gray-light;
+	}
+  }
 }
 
-@mixin back-gradient($width, $top, $right, $bottom, $from, $to) {
-  &:after {
-	opacity: .8;
-	width: $width;
-	content: '';
-	height: 100%;
-	z-index: 5;
-	position: absolute;
-	top:$top;
-	right:$right;
-	bottom: $bottom;
-	background: linear-gradient(to right, $from, $to);
-  }
+@mixin back-gradient($top, $right, $bottom, $left, $from, $to) {
+  background: linear-gradient(to right, $from, $to);
+  //width: $width;
+  opacity: .8;
+  content: '';
+  z-index: 5;
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  right: $right;
+  left:$left;
 }
