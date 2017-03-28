@@ -31,6 +31,7 @@
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<script src="../js/jquery.maskedinput.min.js"></script>
 </head>
 <body>
 
@@ -40,20 +41,62 @@
 			<nav class="navbar">
 				<div class="navbar-header">
 					<a href="#" class="logo"><img src="../img/logo.png" alt="Park center"></a>
-					<button class="menu-btn">
+					<button class="menu-btn" id="mobile-menu">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-svg"></use>
 						</svg>
 					</button>
 				</div>
 				<nav class="navbar-collapse">
+					<ul class="navbar-collapse-r">
+						<li class="parent">
+							<a href="#"><img src="../img/flag-ua.png" alt=""></a>
+							<ul>
+								<li><a href="#"><img src="../img/flag-ua.png" alt=""></a></li>
+								<li><a href="#"><img src="../img/flag-ru.png" alt=""></a></li>
+								<li><a href="#"><img src="../img/flag-eng.png" alt=""></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="tour">
+								Запрошення на екскурсію
+								<span class="navbar-ico navbar-ico-border">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location-svg"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="tel">
+								+38 (044) 377 77 77
+								<span class="navbar-ico call">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#call-svg"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="enter">
+								Кабінет
+								<span class="navbar-ico">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#login-svg"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+					</ul>
+
 					<ul class="navbar-collapse-l">
 						<!-- Пункт меню 1 -->
-						<li class="parent"><a href="/about-us">Про компанію
-							<!--<span class="triangle">&#9650;</span>-->
-						</a>
+						<li class="parent">
+							<a href="about-us.html">Про компанію
+								<!--<span class="triangle">&#9650;</span>-->
+							</a>
 							<ul>
-								<li><a href="#">
+								<li><a href="about-us.html">
 									<span class="navbar-label">
 										<img src="../img/info.png" alt="">
 									</span>
@@ -79,64 +122,65 @@
 							</ul>
 						</li>
 						<!-- Пункт меню 2 -->
-						<li class="parent"><a href="/services">Послуги
-							<!--<span class="triangle">&#9650;</span>-->
-						</a>
+						<li class="parent">
+							<a href="#">Послуги
+								<!--<span class="triangle">&#9650;</span>-->
+							</a>
 							<ul>
 								<li><a href="#">
 									<span class="navbar-label">
 										<img src="../img/equipment.png" alt="">
 									</span>Розміщення обладнання (Colocation)</a></li>
-								<li>
+								<li class="parent">
 									<a href="#">
 										<span class="navbar-label">
 										<img src="../img/cloud.png" alt="">
 									</span>Хмарні послуги</a>
-									<!--<ul>-->
-									<!--<li><a href="#">Infrastructure as a Service </a></li>-->
-									<!--<li><a href="#">Software as a Service</a></li>-->
-									<!--<li><a href="#">Platforms as a Service</a></li>-->
-									<!--</ul>-->
+									<ul>
+										<li><a href="#">Infrastructure as a Service </a></li>
+										<li><a href="#">Software as a Service</a></li>
+										<li><a href="#">Platforms as a Service</a></li>
+									</ul>
 								</li>
-								<li>
+								<li class="parent">
 									<a href="#">
 										<span class="navbar-label">
 										<img src="../img/security.png" alt="">
 									</span>Захист</a>
-									<!--<ul>-->
-									<!--<li><a href="#">Backup as a Service</a></li>-->
-									<!--<li><a href="#">Disaster Recovery as a Service (DRaaS)</a></li>-->
-									<!--<li><a href="#">Захист від DDoS</a></li>-->
-									<!--<li><a href="#">Захист Firewall </a></li>-->
-									<!--<li><a href="#">PaaS</a></li>-->
-									<!--</ul>-->
+									<ul>
+										<li><a href="#">Backup as a Service</a></li>
+										<li><a href="#">Disaster Recovery as a Service (DRaaS)</a></li>
+										<li><a href="#">Захист від DDoS</a></li>
+										<li><a href="#">Захист Firewall </a></li>
+									</ul>
 								</li>
-								<li>
+								<li class="parent">
 									<a href="#">
 										<span class="navbar-label">
 										<img src="../img/it.png" alt="">
 									</span>ІТ-послуги з адміністрування</a>
-									<!--<ul>-->
-									<!--<li><a href="#">Проектування</a></li>-->
-									<!--<li><a href="#">Налаштування та адміністрування</a></li>-->
-									<!--</ul>-->
+									<ul>
+										<li><a href="#">Проектування</a></li>
+										<li><a href="#">Налаштування та адміністрування</a></li>
+									</ul>
 								</li>
-								<li>
+								<li class="parent">
 									<a href="#">
 										<span class="navbar-label">
 										<img src="../img/tv.png" alt="">
 									</span>Телекомунікаційні</a>
-									<!--<ul>-->
-									<!--<li><a href="#">Інтернет</a></li>-->
-									<!--<li><a href="#">Побудова каналу передачі даних</a></li>-->
-									<!--</ul>-->
+									<ul>
+										<li><a href="#">Інтернет</a></li>
+										<li><a href="#">Побудова каналу передачі даних</a></li>
+									</ul>
 								</li>
 							</ul>
 						</li>
 						<!-- Пункт меню 3 -->
-						<li class="parent"><a href="#">Партнерам
-							<!--<span class="triangle">&#9650;</span>-->
-						</a>
+						<li class="parent">
+							<a href="#">Партнерам
+								<!--<span class="triangle">&#9650;</span>-->
+							</a>
 							<ul>
 								<li><a href="#">
 									<span class="navbar-label">
@@ -153,78 +197,72 @@
 							</ul>
 						</li>
 					</ul>
-
-					<ul class="navbar-collapse-r">
-						<li class="parent">
-							<a href="#"><img src="../img/flag-ua.png" alt=""></a>
-							<ul>
-								<li><a href="#"><img src="../img/flag-ua.png" alt=""></a></li>
-								<li><a href="#"><img src="../img/flag-ru.png" alt=""></a></li>
-								<li><a href="#"><img src="../img/flag-eng.png" alt=""></a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#" class="tour">
-								Запрошення на екскурсію
-								<span class="navbar-ico navbar-ico-border">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location-svg"></use>
-									</svg>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="tel">
-							+38 (044) 377 77 77
-								<span class="navbar-ico call">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#call-svg"></use>
-									</svg>
-								</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="enter">
-								Кабінет
-								<span class="navbar-ico">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#login-svg"></use>
-									</svg>
-								</span>
-							</a>
-						</li>
-					</ul>
 				</nav>
 			</nav>
 		</header>
 
 		<div class="content">
+
 			<section>
 				<div class="top-slider">
 					<ul id="top-slider">
 						<li class="slide">
 							<div class="slider-item">
-								<img src="http://3tjgg82p9t5x33q15k3lwedm.wpengine.netdna-cdn.com/wp-content/uploads/2013/08/edge_data_centers1.jpg"
+								<img class="slider-back" src="http://3tjgg82p9t5x33q15k3lwedm.wpengine.netdna-cdn.com/wp-content/uploads/2013/08/edge_data_centers1.jpg"
 									 alt="">
 								<h3 class="slidet-item-txt">
-									Найбільший <br/>ЦОД в Україні
+									Екологічність, <br/>Технологічність, <br/>Інтелектуальність
 									<span class="left-line"></span>
 									<span class="right-line"></span>
 								</h3>
-								<div class="gradient"></div>
 							</div>
 						</li>
 						<li class="slide">
 							<div class="slider-item">
-								<img src="http://3tjgg82p9t5x33q15k3lwedm.wpengine.netdna-cdn.com/wp-content/uploads/2013/08/edge_data_centers1.jpg"
+								<img class="slider-back" src="http://3tjgg82p9t5x33q15k3lwedm.wpengine.netdna-cdn.com/wp-content/uploads/2013/08/edge_data_centers1.jpg"
 									 alt="">
-								<div class="gradient"></div>
+								<h3 class="slidet-item-txt">
+									Екологічність, <br/>
+									- Прозоре ведення бізнесу<br/>
+									- Гнучкі тарифи без перехованих платежів<br/>
+									- Відповідальне Партнерство
+									<span class="left-line"></span>
+									<span class="right-line"></span>
+								</h3>
 							</div>
 						</li>
-						<li>
-							<iframe src="http://player.vimeo.com/video/17914974" width="500" height="281"
-									frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<li class="slide">
+							<div class="slider-item">
+								<img class="slider-back" src="http://3tjgg82p9t5x33q15k3lwedm.wpengine.netdna-cdn.com/wp-content/uploads/2013/08/edge_data_centers1.jpg"
+									 alt="">
+								<h3 class="slidet-item-txt">
+									Технологічність <br/>
+									- Гарантована надійність TIER III (лого)<br/>
+									- Сертифікована безпека (лого ISO 27001)<br/>
+									- Висока енергоефективність економічність (PUE = 1,35)
+									<span class="left-line"></span>
+									<span class="right-line"></span>
+								</h3>
+							</div>
 						</li>
+						<li class="slide">
+							<div class="slider-item">
+								<img class="slider-back" src="http://3tjgg82p9t5x33q15k3lwedm.wpengine.netdna-cdn.com/wp-content/uploads/2013/08/edge_data_centers1.jpg"
+									 alt="">
+								<h3 class="slidet-item-txt">
+									Інтелектуальність <br/>
+									- Сучасні системи моніторингу роботи SCADA<br/>
+									- Кваліфікований персонал<br/>
+									- Широкий спектр можливостей
+									<span class="left-line"></span>
+									<span class="right-line"></span>
+								</h3>
+							</div>
+						</li>
+						<!--<li>-->
+						<!--<iframe src="http://player.vimeo.com/video/17914974" width="500" height="281"-->
+						<!--frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>-->
+						<!--</li>-->
 					</ul>
 				</div>
 			</section>
@@ -373,21 +411,15 @@
 								<span class="right-line"></span>
 							</li>
 							<li>
-								<span class="number">3</span>
-								<h5>Гнучка система ціноутворення</h5>
-								<p>Гнучка і багаторівнева система ціноутворення</p>
-								<span class="right-line"></span>
-							</li>
-							<li>
-								<span class="number">5</span>
-								<h5>КОМПЛЕКСНА БЕЗПЕКА</h5>
-								<p>Забезпечення безпеки - одна з першорядних завдань</p>
-								<span class="right-line"></span>
-							</li>
-							<li>
 								<span class="number">2</span>
 								<h5>можливість масштабування</h5>
 								<p>Можливості для масштабування інфраструктури</p>
+								<span class="right-line"></span>
+							</li>
+							<li>
+								<span class="number">3</span>
+								<h5>Гнучка система ціноутворення</h5>
+								<p>Гнучка і багаторівнева система ціноутворення</p>
 								<span class="right-line"></span>
 							</li>
 							<li>
@@ -396,64 +428,224 @@
 								<p>Відсутність обмежень по потужності, до 20 кВт на стійку</p>
 								<span class="right-line"></span>
 							</li>
+							<li>
+								<span class="number">5</span>
+								<h5>КОМПЛЕКСНА БЕЗПЕКА</h5>
+								<p>Забезпечення безпеки - одна з першорядних завдань</p>
+								<span class="right-line"></span>
+							</li>
 						</ul>
 					</div>
 					<span class="gray-line"></span>
 				</section>
 
 				<section class="partner-content">
-					<h3 class="caption">наші сертифікати</h3>
+					<h3 class="caption">наші партнери</h3>
 					<ul>
 						<li><img src="http://www.it-universe.ru/images/logo/emc-logo.jpg" alt=""></li>
 						<li><img src="https://hexcore.ru/cp/images/partners/microsoft-spla.png" alt=""></li>
 						<li><img src="http://www.logobank.ru/images/ph/en/c/cisco.png" alt=""></li>
-						<li><img src="http://www.kpower.ru/MediaFiles/DownFile.ashx?fileId=bacee244-956a-45ab-b0b4-62b41a39a2ef" alt=""></li>
-						<li><img src="http://www.topseti.ru/media/app_models_ProductItem/images/Panduit-logo.jpg" alt=""></li>
+						<li><img
+								src="http://www.kpower.ru/MediaFiles/DownFile.ashx?fileId=bacee244-956a-45ab-b0b4-62b41a39a2ef"
+								alt=""></li>
+						<li><img src="http://www.topseti.ru/media/app_models_ProductItem/images/Panduit-logo.jpg"
+								 alt=""></li>
 					</ul>
 					<span class="gray-line"></span>
 				</section>
 
-				<section class="feedback">
-					<ul id="feedback-slider">
-						<li class="slide">
-							<h3 class="caption">Відгуки</h3>
-							<span class="slide-photo"><img src="../img/feedback-photo.png" alt=""></span>
-							<div class="slider-item">
-								<h3 class="caption">Panduit</h3>
-								<p class="feedback-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore dolores harum, hic nisi quam quis sunt tenetur ut vel. Illum natus optio voluptatibus. Culpa et laborum mollitia odio soluta.</p>
-							</div>
-						</li>
-					</ul>
+				<section class="feedback-content">
+					<div class="feedback-list">
+						<ul id="feedback-slider">
+							<li class="slide">
+								<h3 class="caption">Відгуки</h3>
+								<div class="feedback">
+									<span class="slide-photo"><img src="../img/feedback-photo.png" alt=""></span>
+									<div class="slider-item">
+										<h3 class="caption">Panduit</h3>
+										<p class="feedback-txt">
+											1111 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+											dolore dolores harum, hic nisi quam quis sunt tenetur ut vel. Illum natus
+											optio voluptatibus. Culpa et laborum mollitia odio soluta.</p>
+									</div>
+								</div>
+							</li>
+							<li class="slide">
+								<h3 class="caption">Відгуки</h3>
+								<div class="feedback">
+									<span class="slide-photo"><img src="../img/feedback-photo.png" alt=""></span>
+									<div class="slider-item">
+										<h3 class="caption">Panduit</h3>
+										<p class="feedback-txt">
+											22222 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+											blanditiis consequatur dignissimos distinctio eos eum necessitatibus
+											obcaecati possimus repellat repellendus tempora, tempore. Autem excepturi
+											labore nemo quos rerum temporibus unde!
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore dolores
+											harum, hic nisi quam quis sunt tenetur ut vel. Illum natus optio
+											voluptatibus. Culpa et laborum mollitia odio soluta.</p>
+									</div>
+								</div>
+							</li>
+							<li class="slide">
+								<h3 class="caption">Відгуки</h3>
+								<div class="feedback">
+									<span class="slide-photo"><img src="../img/feedback-photo.png" alt=""></span>
+									<div class="slider-item">
+										<h3 class="caption">Panduit</h3>
+										<p class="feedback-txt">
+											1111 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+											dolore dolores harum, hic nisi quam quis sunt tenetur ut vel. Illum natus
+											optio voluptatibus. Culpa et laborum mollitia odio soluta.</p>
+									</div>
+								</div>
+							</li>
+							<li class="slide">
+								<h3 class="caption">Відгуки</h3>
+								<div class="feedback">
+									<span class="slide-photo"><img src="../img/feedback-photo.png" alt=""></span>
+									<div class="slider-item">
+										<h3 class="caption">Panduit</h3>
+										<p class="feedback-txt">
+											22222 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+											blanditiis consequatur dignissimos distinctio eos eum necessitatibus
+											obcaecati possimus repellat repellendus tempora, tempore. Autem excepturi
+											labore nemo quos rerum temporibus unde!
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore dolores
+											harum, hic nisi quam quis sunt tenetur ut vel. Illum natus optio
+											voluptatibus. Culpa et laborum mollitia odio soluta.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<span class="gray-line"></span>
 				</section>
 
-				<section>
+				<section class="news-content">
 					<h3 class="caption">новини</h3>
-					<ul>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at commodi, consequuntur cumque ducimus et ipsa iusto laudantium, nihil nobis nostrum numquam officiis provident quam, quibusdam quidem reiciendis? Consectetur, qui!</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at commodi, consequuntur cumque ducimus et ipsa iusto laudantium, nihil nobis nostrum numquam officiis provident quam, quibusdam quidem reiciendis? Consectetur, qui!</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at commodi, consequuntur cumque ducimus et ipsa iusto laudantium, nihil nobis nostrum numquam officiis provident quam, quibusdam quidem reiciendis? Consectetur, qui!</li>
-					</ul>
+					<div class="news-list">
+						<ul>
+							<li>
+								<time class="news-time">2017-02-02</time>
+								<p>
+									Aliquam at commodi, consequuntur cumque ducimus et ipsa iusto laudantium, nihil
+									nobis nostrum
+								</p>
+							</li>
+							<li>
+								<time class="news-time">2017-02-02</time>
+								<p>
+									Aliquam at commodi, consequuntur cumque ducimus et ipsa iusto laudantium, nihil
+									nobis nostrum
+								</p>
+							</li>
+							<li>
+								<time class="news-time">2017-02-02</time>
+								<p>
+									Aliquam at commodi, consequuntur cumque ducimus et ipsa iusto laudantium, nihil
+									nobis nostrum
+								</p>
+							</li>
+						</ul>
+						<button class="btn-dark">дивитись всі</button>
+					</div>
+					<span class="gray-line"></span>
 				</section>
-				<section></section>
 			</section>
-			<section></section>
-			<section></section>
-			<section></section>
-			<section></section>
-			<section></section>
 		</div>
 	</div>
 
-	<footer></footer>
+	<footer class="footer-wrapper">
+		<div class="site-wrapper">
+			<ul class="footer-menu">
+				<li>
+					<a href="">Про компанію</a>
+				</li>
+				<li>
+					<a href="">Послуги</a>
+				</li>
+				<li>
+					<a href="" class="footer-logo"><img src="../img/logo-gray.png" alt=""></a>
+				</li>
+				<li>
+					<a href="">Партнерам</a>
+				</li>
+				<li>
+					<a href="">Кабінет</a>
+				</li>
+			</ul>
+			<section class="contacts">
+				<p>Відділ продажів: Телефон/факс: +38 (044) 377-77-77</p>
+				<p><strong>sales@datacenter.ua</strong></p>
+				<p>Датацентр: Паркова дорога, 16А</p>
+				<p>Техінчна підтримка: +38 (044) 377-77-70</p>
+				<p><strong>support@datacenter.ua</strong></p>
+			</section>
+			<ul class="event">
+				<li>
+					<span class="footer-ico">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download-svg"></use>
+									</svg>
+					</span>
+					<a href="">Завантажити презентацію</a>
+				</li>
+				<li>
+					<span class="footer-ico">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download-2-svg"></use>
+									</svg>
+					</span>
+					<a href="">Завантажити відеопрезентацію</a>
+				</li>
+				<li>
+					<span class="footer-ico footer-ico-border">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location-svg"></use>
+									</svg>
+					</span>
+					<a href="">Завiтайте на экскурсію</a>
+				</li>
+			</ul>
+			<a href="">
+					<span class="footer-social">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-svg"></use>
+									</svg>
+					</span>
+			</a>
+			<a href="">
+					<span class="footer-social">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink"
+										 xlink:href="#video-youtube-svg"></use>
+									</svg>
+					</span>
+			</a>
+		</div>
+	</footer>
+</div>
+
+<div class="overlay-popup">
+	<div class="popup">
+		<span id="close">&times;</span>
+		<label for="phone-number">
+			<input id="phone-number" placeholder="+38 (0XX) XXX XXX XX" type="text" name="tel"
+				   pattern="+ 38 ([0-9]{3}) [0-9]{3}[0-9]{3}[0-9]{2}">
+		</label>
+		капча
+		<button class="btn-dark">замовити</button>
+	</div>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" style="display:none;">
 	<path id="menu-svg" d="M0 35h40v5H0zm0-17.5h40v5H0zM0 0h40v5H0z"/>
 	<g id='location-svg'>
 		<path d="m313.9,376.7c41.3-68.5 93.5-164.8 93.5-214.3 0-83.5-67.9-151.4-151.4-151.4-83.5,0-151.4,67.9-151.4,151.4 0,49.5 52.2,145.8 93.5,214.3-49,3.7-160.5,17-160.5,61.1 0,43.4 113.2,63.2 218.5,63.2 105.2,0 218.5-19.8 218.5-63.2-0.1-44.1-111.7-57.4-160.7-61.1zm-188.4-214.3c0-72 58.6-130.6 130.5-130.6 72,0 130.6,58.6 130.6,130.6 0,62.9-100.2,220.7-130.6,267.1-30.4-46.4-130.5-204.2-130.5-267.1zm130.5,317.7c-127.9,0-197.6-28-197.6-42.4 0-11.1 46-35 152-41.1 19.9,32.1 35,54.8 37,57.5 2.7,3.6 10.6,7.9 17.3,0 2.1-2.5 17.1-25.4 37-57.5 106,6.1 152,29.9 152,41.1-0.1,14.5-69.8,42.4-197.7,42.4z"
-			  />
+		/>
 		<path d="m321.9,162.4c0-36.4-29.5-65.9-65.9-65.9-36.4,0-65.9,29.5-65.9,65.9 0,36.4 29.5,65.9 65.9,65.9 36.4,0 65.9-29.5 65.9-65.9zm-111,0c0-24.9 20.2-45.1 45.1-45.1s45.1,20.2 45.1,45.1c0,24.9-20.2,45.1-45.1,45.1s-45.1-20.2-45.1-45.1z"
-			  />
+		/>
 	</g>
 	<path id="call-svg" d="M414.8,71.25C368.9,25.35,307.9,0.05,243,0.05s-125.9,25.3-171.8,71.2S0,178.15,0,243.05s25.3,125.9,71.2,171.8
 		s106.9,71.2,171.8,71.2c37.7,0,72.1-7,99.4-20.1c25.9-12.5,44.7-30.4,53-50.3c9.9-23.9,4.3-48.8-15.3-68.4l-0.7-0.7
@@ -479,45 +671,25 @@
 		<path d="M29.293,17.707L37.586,26H13c-0.552,0-1,0.447-1,1s0.448,1,1,1h24.586l-8.293,8.293l1.414,1.414L41.414,27L30.707,16.293
 		L29.293,17.707z"/>
 	</g>
-
-
-
-	<path id="listen"
-		  d="M22.227 18.252c.036.197.06.396.06.605 0 1.893-1.534 3.43-3.428 3.43 0 .946-.77 1.713-1.72 1.713-.947 0-1.714-.767-1.714-1.714v-6.858c0-.947.766-1.714 1.713-1.714.95 0 1.715.766 1.715 1.714.943 0 1.8.382 2.418 1.002.644-1.343 1.01-2.845 1.01-4.43C22.286 6.326 17.67 1.713 12 1.713S1.716 6.327 1.716 12c0 1.585.366 3.086 1.01 4.428.62-.618 1.474-1 2.418-1 0-.947.767-1.714 1.715-1.714.943 0 1.71.766 1.71 1.714v6.858c0 .947-.767 1.714-1.714 1.714-.95 0-1.716-.767-1.716-1.714-1.893 0-3.43-1.535-3.43-3.43 0-.207.03-.408.063-.604C.656 16.432 0 14.295 0 12 0 5.37 5.372 0 12 0s12 5.372 12 12c.002 2.294-.654 4.43-1.773 6.252zm0 0"></path>
-	<path id="watching"
-		  d="M22.505 14.995v30.012L45.007 29.99 22.505 14.995zm7.483-11.24c14.633 0 26.258 11.624 26.258 26.235 0 14.633-11.625 26.256-26.258 26.256-14.61 0-26.234-11.623-26.234-26.256C3.756 15.38 15.38 3.756 29.988 3.756zm0-3.755C13.495 0 0 13.495 0 29.988 0 46.505 13.495 60 29.988 60 46.505 60 60 46.505 60 29.988 60 13.495 46.507 0 29.988 0zm0 0"></path>
-	<path id="fb"
-		  d="M6.288 7.002H4.372V14h-2.62V7.002H0V4.597l1.752-.01-.008-1.418C1.744 1.203 2.28 0 4.6 0h1.93v2.415H5.32c-.9 0-.948.342-.948.97v1.202h2.17l-.254 2.41z"></path>
-	<path id="twitter"
-		  d="M15.363 3.48c-.128 6.04-3.936 10.242-9.713 10.505-2.367.135-4.072-.654-5.65-1.57 1.705.262 3.945-.4 5.122-1.45-1.705-.13-2.755-1.046-3.283-2.495.525.135 1.05 0 1.44 0C1.704 7.945.66 7.028.526 4.924c.397.264.916.4 1.44.4C.79 4.66 0 2.166.923.59c1.705 1.84 3.802 3.418 7.22 3.68-.918-3.68 4.07-5.65 6.04-3.156.916-.126 1.575-.524 2.23-.78-.262.916-.788 1.442-1.442 1.967.657-.132 1.317-.26 1.84-.522-.13.654-.784 1.18-1.445 1.705z"></path>
-	<path id="youtube"
-		  d="M15.75.35c-.525-.175-3.762-.35-7-.35-3.237 0-6.475.175-7 .35C.35.788 0 3.85 0 7c0 3.15.35 6.213 1.75 6.65.525.175 3.763.35 7 .35 3.238 0 6.475-.175 7-.35 1.4-.437 1.75-3.5 1.75-6.65 0-3.15-.35-6.212-1.75-6.65zM7 10.938V3.063L12.25 7 7 10.938z"></path>
-	<path id="googleplus"
-		  d="M18.036 3.99h1.988c.003.665.007 1.334.013 1.997.665.01 1.333.01 2 .014v1.99c-.666.01-1.33.01-2 .02-.006.67-.01 1.34-.013 2h-1.99c-.008-.66-.008-1.33-.015-1.99-.67-.01-1.34-.01-2-.02V6c.66-.01 1.33-.01 2-.013 0-.667.01-1.332.01-1.997zM.02 6.65C.077 3.044 3.392-.114 6.997.005c1.728-.08 3.35.672 4.675 1.728-.565.642-1.15 1.26-1.775 1.838-1.59-1.1-3.853-1.41-5.442-.14-2.275 1.57-2.38 5.29-.19 6.98 2.128 1.93 6.15.98 6.74-1.98-1.334-.02-2.67 0-4.004-.04V6c2.23-.01 4.46-.01 6.69.01.14 1.87-.11 3.863-1.26 5.41-1.74 2.45-5.23 3.164-7.96 2.114C1.73 12.49-.21 9.6.02 6.656z"></path>
-	<path id="vk"
-		  d="M95.858 67.545c-2.978-3.572-6.482-6.62-9.797-9.856-2.99-2.92-3.176-4.61-.772-7.98 2.624-3.674 5.446-7.208 8.094-10.867 2.47-3.418 5-6.828 6.3-10.92.824-2.606.095-3.756-2.576-4.212-.46-.08-.936-.083-1.404-.083l-15.845-.02c-1.952-.03-3.03.822-3.72 2.552-.933 2.337-1.893 4.673-3.003 6.93-2.518 5.114-5.33 10.06-9.274 14.245-.87.924-1.83 2.09-3.284 1.61-1.818-.664-2.354-3.66-2.324-4.67l-.015-18.29c-.353-2.612-.932-3.777-3.526-4.285l-16.46.005c-2.197 0-3.3.848-4.472 2.223-.677.793-.88 1.308.51 1.572 2.732.518 4.27 2.286 4.68 5.025.654 4.376.608 8.77.23 13.164-.11 1.282-.33 2.562-.84 3.76-.795 1.883-2.08 2.267-3.768 1.11-1.53-1.05-2.604-2.53-3.654-4.017-3.948-5.577-7.097-11.592-9.665-17.913-.74-1.825-2.02-2.932-3.955-2.962-4.754-.076-9.508-.09-14.262.004-2.86.053-3.713 1.442-2.548 4.035C5.682 39.225 11.445 50.42 18.968 60.62c3.862 5.234 8.297 9.855 14.026 13.13 6.492 3.712 13.48 4.83 20.842 4.486 3.447-.162 4.483-1.06 4.642-4.494.108-2.35.374-4.687 1.534-6.8 1.138-2.072 2.86-2.467 4.848-1.178.994.646 1.83 1.468 2.622 2.334 1.94 2.123 3.81 4.31 5.824 6.36 2.526 2.57 5.517 4.088 9.28 3.78l14.562.002c2.346-.154 3.563-3.03 2.216-5.65-.947-1.834-2.188-3.467-3.506-5.047z"></path>
-	<path id="rss"
-		  d="M1.862 10.266c-1.025 0-1.862.837-1.862 1.86 0 1.03.838 1.858 1.862 1.858 1.033 0 1.866-.83 1.866-1.86 0-1.02-.832-1.858-1.866-1.858zM0 4.756v2.682c1.748 0 3.392.685 4.625 1.924 1.24 1.233 1.918 2.882 1.918 4.638H9.24c0-5.097-4.144-9.244-9.24-9.244zM.003 0v2.684c6.233 0 11.305 5.08 11.305 11.316H14C14 6.28 7.72 0 .003 0zm0 0"></path>
-	<path id="whatsapp"
-		  d="M85.43 14.86C76.027 5.45 63.526.266 50.206.26 22.763.26.426 22.593.416 50.045c-.003 8.776 2.29 17.34 6.646 24.892L0 100.737l26.394-6.922c7.272 3.967 15.46 6.058 23.793 6.06h.02c27.442 0 49.78-22.336 49.79-49.79.006-13.303-5.168-25.812-14.568-35.224M50.202 91.47h-.017c-7.426-.003-14.71-1.998-21.063-5.768l-1.51-.9-15.664 4.11 4.18-15.27-.983-1.567c-4.14-6.59-6.33-14.203-6.326-22.023.01-22.818 18.575-41.38 41.4-41.38 11.056.003 21.447 4.313 29.26 12.135 7.814 7.822 12.114 18.22 12.11 29.278-.006 22.815-18.57 41.382-41.38 41.382m22.7-30.995c-1.245-.622-7.36-3.632-8.5-4.047-1.14-.415-1.97-.622-2.8.622-.83 1.245-3.215 4.048-3.94 4.88-.726.83-1.45.933-2.696.31-1.244-.623-5.253-1.936-10.005-6.175-3.7-3.3-6.2-7.373-6.92-8.62-.73-1.244-.08-1.917.54-2.537.56-.558 1.244-1.454 1.866-2.18.62-.726.827-1.246 1.242-2.075.414-.83.207-1.557-.105-2.18-.313-.622-2.8-6.746-3.837-9.238-1.01-2.425-2.036-2.097-2.8-2.135-.725-.036-1.555-.044-2.384-.044-.83 0-2.178.31-3.32 1.557-1.14 1.245-4.353 4.255-4.353 10.378 0 6.124 4.46 12.04 5.08 12.87.622.83 8.772 13.396 21.253 18.785 2.97 1.283 5.286 2.048 7.093 2.62 2.98.948 5.692.814 7.835.494 2.39-.357 7.36-3.01 8.396-5.915 1.038-2.907 1.038-5.397.727-5.916-.31-.52-1.14-.83-2.384-1.454"></path>
-	<path id="viber"
-		  d="M58.192 26.73c-1.31.033-4.036.1-4.992 2.886-.447 1.3-.394 2.43.16 3.358.81 1.36 2.367 1.777 3.782 2.005 5.132.82 7.767 3.67 8.295 8.95.244 2.46 1.9 4.18 4.023 4.18.157 0 .317-.01.477-.03 2.555-.31 3.793-2.19 3.68-5.6.042-3.56-1.814-7.598-4.97-10.81-3.166-3.23-6.983-5.04-10.455-4.96zm32.425 48.026c-.48-.368-.975-.748-1.44-1.122-2.46-1.987-5.08-3.818-7.61-5.59-.527-.367-1.052-.734-1.576-1.103-3.24-2.28-6.16-3.39-8.91-3.39-3.71 0-6.94 2.06-9.62 6.12-1.18 1.8-2.62 2.67-4.38 2.67-1.04 0-2.23-.3-3.53-.89-10.48-4.76-17.95-12.07-22.23-21.71-2.06-4.66-1.39-7.7 2.24-10.18 2.07-1.4 5.91-4.02 5.64-9.03-.31-5.69-12.83-22.82-18.11-24.77-2.23-.82-4.58-.83-6.99-.02C8.03 7.78 3.68 11.37 1.51 16.12c-2.1 4.588-2.008 9.976.27 15.58 6.582 16.208 15.836 30.338 27.505 42 11.422 11.413 25.46 20.763 41.727 27.79 1.466.63 3.004.976 4.127 1.227.38.087.71.16.95.226.13.037.27.056.4.057h.13c7.65 0 16.83-7.014 19.65-15.007 2.47-7-2.04-10.46-5.67-13.24zm-35.81-66.54c.408.03.793.06 1.113.108 22.544 3.477 32.912 14.19 35.785 36.98.05.386.056.86.064 1.36.02 1.78.08 5.483 4.05 5.56h.12c1.24 0 2.23-.375 2.94-1.118 1.23-1.295 1.15-3.22 1.08-4.765-.02-.37-.04-.73-.03-1.05C100.22 21.99 80.11.85 56.89.07c-.094-.003-.19.002-.28.015-.044.007-.13.015-.274.015-.23 0-.517-.02-.82-.04-.366-.03-.78-.06-1.2-.06-3.696 0-4.4 2.636-4.49 4.207-.206 3.63 3.296 3.887 4.98 4.01zm31.69 35.006c.125-14.52-12.206-27.834-27.487-29.675-.304-.036-.635-.09-.985-.15-.757-.125-1.54-.254-2.328-.254-3.132 0-3.97 2.207-4.19 3.522-.214 1.28-.01 2.354.607 3.195 1.037 1.415 2.862 1.666 4.328 1.867.43.06.835.115 1.174.19 13.73 3.078 18.35 7.916 20.61 21.57.056.332.08.743.107 1.18.1 1.63.304 5.027 3.944 5.027.303 0 .628-.026.967-.078 3.39-.517 3.283-3.62 3.232-5.112-.014-.42-.028-.817.008-1.08.01-.068.014-.135.014-.202z"></path>
-	<path id="volume-on"
-		  d="M17.855 4.822c-.36-.26-.86-.175-1.118.19-.257.364-.174.87.186 1.13 1.55 1.12 2.474 2.936 2.474 4.858 0 1.922-.925 3.738-2.474 4.857-.36.26-.443.767-.186 1.132.156.22.403.34.653.34.16 0 .324-.05.465-.155C19.825 15.755 21 13.445 21 11s-1.176-4.755-3.145-6.178zM13.892.088c-.27-.14-.593-.112-.836.07L4.31 6.65c-.14-.12-.32-.194-.52-.194H.803C.36 6.456 0 6.82 0 7.268v7.464c0 .448.36.812.802.812h2.99c.197 0 .378-.074.518-.195l8.746 6.49c.14.104.306.157.474.157.124 0 .248-.03.362-.09.27-.137.44-.417.44-.722V.81c0-.304-.17-.584-.44-.722zM2.99 13.92H1.602V8.08H2.99v5.84zm1.602-.374V8.454l8.136-6.04v17.173l-8.136-6.04z"></path>
-	<path id="telegram"
-		  d="M1.766 41.716l23.042 8.594 8.92 28.66c.57 1.836 2.816 2.514 4.307 1.296L50.88 69.803c1.345-1.096 3.263-1.15 4.67-.13L78.716 86.48c1.595 1.158 3.855.284 4.255-1.642L99.94 3.27c.438-2.103-1.63-3.858-3.636-3.083L1.74 36.64c-2.334.898-2.314 4.2.026 5.076zm30.524 4.02L77.322 18.02c.81-.496 1.642.598.947 1.242l-37.167 34.52c-1.306 1.215-2.15 2.84-2.387 4.606l-1.266 9.375c-.167 1.252-1.927 1.376-2.272.164l-4.87-17.095c-.557-1.95.256-4.032 1.982-5.097z"></path>
-	<path id="volume-off"
-		  d="M20.332 11l2.425-2.377c.324-.317.324-.83 0-1.147-.323-.317-.847-.317-1.17 0L19.16 9.853l-2.424-2.377c-.323-.317-.848-.317-1.17 0-.324.316-.324.83 0 1.147L17.99 11l-2.425 2.377c-.323.317-.323.83 0 1.147.162.16.374.238.586.238.216 0 .428-.08.59-.238l2.425-2.377 2.427 2.377c.16.16.373.238.585.238.212 0 .424-.08.586-.238.324-.316.324-.83 0-1.147L20.333 11zM14.346.088c-.278-.14-.612-.112-.863.07L4.45 6.65c-.143-.12-.33-.194-.535-.194H.828C.37 6.456 0 6.82 0 7.268v7.464c0 .448.37.812.828.812h3.087c.205 0 .392-.074.536-.195l9.037 6.49c.145.103.317.156.49.156.127 0 .255-.03.374-.09.278-.137.453-.417.453-.722V.81c0-.304-.174-.584-.453-.722zm-12.69 7.99h1.43v5.843h-1.43V8.08zm3.087 5.468V8.454l8.4-6.04.002 17.173-8.402-6.04z"></path>
-	<path id="search"
-		  d="M1.94 15.67l5.248-5.25c.92.614 2 .942 3.132.942 1.517 0 2.942-.59 4.017-1.665C15.41 8.624 16 7.2 16 5.682c0-1.52-.59-2.946-1.663-4.02C13.263.59 11.837 0 10.32 0 8.8 0 7.377.59 6.304 1.663S4.64 4.163 4.64 5.68c0 1.132.328 2.212.94 3.133L.334 14.06c-.216.214-.334.5-.334.804 0 .303.118.59.332.804.445.443 1.165.443 1.608 0zm12.07-9.99c0 .984-.384 1.91-1.08 2.61-.698.697-1.625 1.08-2.61 1.08-.986 0-1.914-.384-2.61-1.08-.695-.7-1.08-1.626-1.08-2.61 0-.986.385-1.914 1.08-2.61.697-.698 1.624-1.082 2.61-1.082.985 0 1.912.383 2.61 1.082.697.696 1.08 1.624 1.08 2.61zm0 0"></path>
-	<path id="close"
-		  d="M9.427 8l6.468-6.468c.14-.14.14-.365 0-.505l-.922-.922C14.906.038 14.815 0 14.72 0s-.185.038-.252.105L8 6.573 1.532.105c-.134-.134-.37-.134-.505 0l-.922.922c-.14.14-.14.366 0 .505L6.573 8 .105 14.468c-.14.14-.14.365 0 .505l.922.922c.067.067.158.105.253.105.094 0 .185-.038.252-.105L8 9.427l6.468 6.468c.067.067.158.105.252.105.095 0 .186-.038.253-.105l.922-.922c.14-.14.14-.366 0-.505L9.427 8z"></path>
-	<path id="social"
-		  d="M73.877 178.324c20.38 0 38.212 7.642 50.95 20.38l180.87-104.447c-2.546-5.095-2.546-12.737-2.546-17.832C303.15 33.117 336.27 0 379.577 0 422.883 0 456 33.117 456 76.425c0 43.307-33.117 76.424-76.425 76.424-20.38 0-38.212-7.644-50.95-20.38l-180.87 104.445c2.547 5.095 2.547 12.738 2.547 17.833 0 5.094 0 12.736-2.548 17.83l180.872 106.995c12.737-12.737 30.57-20.38 50.95-20.38 40.76 0 73.877 33.118 73.877 73.878s-33.118 73.878-73.878 73.878-73.877-33.118-73.877-73.877c0-5.094 0-10.19 2.548-17.832L127.374 308.246c-12.737 12.737-30.57 20.38-50.95 20.38C33.118 328.626 0 295.508 0 252.2c0-43.306 30.57-73.876 73.877-73.876z"></path>
-	<path id="arrow-prev" d="M41.19 80L0 40 41.19 0l2.133 2.196L4.4 40l38.923 37.805L41.19 80zm0 0"></path>
-	<path id="arrow-next" d="M2.133 80l41.19-40L2.133 0 0 2.196 38.924 40 0 77.804 2.133 80zm0 0"></path>
-	<path id="arrow-up" d="M0 41.19L40 0l40 41.19-2.196 2.133L40 4.4 2.196 43.322 0 41.19zm0 0"></path>
-	<path id="arrow-down" d="M0 2.133l40 41.19 40-41.19L77.804 0 40 38.924 2.196 0 0 2.133zm0 0"></path>
+	<g id="download-svg">
+		<path d="M490.4,245.2C490.4,110,380.4,0,245.2,0S0,110,0,245.2s110,245.2,245.2,245.2S490.4,380.4,490.4,245.2z M24.5,245.2    c0-121.7,99-220.7,220.7-220.7s220.7,99,220.7,220.7s-99,220.7-220.7,220.7S24.5,366.9,24.5,245.2z"
+			  fill="#4f4f4f"/>
+		<path d="M253.9,360.4l68.9-68.9c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-48,48V138.7c0-6.8-5.5-12.3-12.3-12.3    s-12.3,5.5-12.3,12.3v183.4l-48-48c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l68.9,68.9c2.4,2.4,5.5,3.6,8.7,3.6    S251.5,362.8,253.9,360.4z"
+			  fill="#4f4f4f"/>
+	</g>
+	<g id="download-2-svg">
+		<path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z"
+			  fill="#4f4f4f"/>
+		<path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z"
+			  fill="#4f4f4f"/>
+	</g>
+	<path id="facebook-svg"
+		  d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+	<path id="youtube-svg"
+		  d="M95.201,25.538c-1.186-5.152-5.4-8.953-10.473-9.52c-12.013-1.341-24.172-1.348-36.275-1.341   c-12.105-0.007-24.266,0-36.279,1.341c-5.07,0.567-9.281,4.368-10.467,9.52C0.019,32.875,0,40.884,0,48.438   C0,55.992,0,64,1.688,71.336c1.184,5.151,5.396,8.952,10.469,9.52c12.012,1.342,24.172,1.349,36.277,1.342   c12.107,0.007,24.264,0,36.275-1.342c5.07-0.567,9.285-4.368,10.471-9.52c1.689-7.337,1.695-15.345,1.695-22.898   C96.875,40.884,96.889,32.875,95.201,25.538z M35.936,63.474c0-10.716,0-21.32,0-32.037c10.267,5.357,20.466,10.678,30.798,16.068   C56.434,52.847,46.23,58.136,35.936,63.474z"/>
+	<path id="video-youtube-svg" d="M459,61.2C443.7,56.1,349.35,51,255,51c-94.35,0-188.7,5.1-204,10.2C10.2,73.95,0,163.2,0,255s10.2,181.05,51,193.8
+			C66.3,453.9,160.65,459,255,459c94.35,0,188.7-5.1,204-10.2c40.8-12.75,51-102,51-193.8S499.8,73.95,459,61.2z M204,369.75v-229.5
+			L357,255L204,369.75z"/>
 </svg>
 </body>
 </html>

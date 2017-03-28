@@ -34,12 +34,24 @@ $(document).ready(function () {
 	});
 
 	$(document).on('scroll', function() {
-		// if($(window).scrollTop() !== 0) {
-		// 	$('.navbar').height('0rem');
-		// 	$('.logo').css({'max-width': '7rem', 'transition': 'max-width .3s ease-out 0.3s'});
-		// } else {
-		// 	$('.navbar').height('5rem');
-		// 	$('.logo').css('max-width', '10rem');
-		// }
+		if($(window).scrollTop() !== 0) {
+			$('.navbar').addClass('navbar-min');
+		} else {
+			$('.navbar').removeClass('navbar-min');
+		}
+	});
+
+	$("#phone-number").mask("+38 (099) 999-9999");
+
+	$('.tour, .tel, .enter').on('click', function() {
+		$('.overlay-popup').show('slow');
+	});
+
+	$('#close').on('click', function() {
+		$('.overlay-popup').hide('slow');
+	});
+	
+	$('#mobile-menu').on('click', function() {
+		$('.navbar-collapse').toggleClass('show');
 	})
 });
