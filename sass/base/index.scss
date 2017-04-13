@@ -46,7 +46,7 @@ p {
 }
 
 a.btn-dark {
-  color: #fff!important;
+  color: #fff !important;
   display: inline-block;
 }
 
@@ -291,6 +291,7 @@ header {
 	max-width: 7rem;
   }
 }
+
 //---------/header--------
 
 //---------index page-----------------
@@ -880,6 +881,7 @@ header {
   }
 
 }
+
 //---------/index page-----------------
 
 .statpage {
@@ -969,7 +971,7 @@ header {
 	.preview-news:after {
 	  content: '';
 	  display: block;
-	  box-shadow:  0 -5px 55px 25px #fff;
+	  box-shadow: 0 -5px 55px 25px #fff;
 	  background: #fff;
 	  width: 100%;
 	  position: absolute;
@@ -1020,7 +1022,7 @@ header {
 	background-size: contain;
 
 	> li {
-	  width:27rem;
+	  width: 27rem;
 	  position: absolute;
 	}
 
@@ -1035,17 +1037,17 @@ header {
 	}
 
 	.security-block {
-	  right:-11rem;
-	  top:30rem;
+	  right: -11rem;
+	  top: 30rem;
 	}
 
 	.it-block {
-	  bottom:0;
-	  left:13rem;
+	  bottom: 0;
+	  left: 13rem;
 	}
 
 	.tv-block {
-	  bottom:0;
+	  bottom: 0;
 	  right: 10rem;
 	}
   }
@@ -1116,13 +1118,14 @@ header {
   }
 }
 
-.services-page {
-  @include gray-line-mix(50%);
+//.services-page {
+.services-name {
+  @include gray-line-mix(48%);
 
   .services-description {
-	max-width:76.8rem;
+	max-width: 76.8rem;
 	border: 2px solid $gradient-dark;
-	border-image:  linear-gradient(to right, $gradient-dark, $gradient-light) 1;
+	border-image: linear-gradient(to right, $gradient-dark, $gradient-light) 1;
 	margin: 0 auto;
 	padding: 5rem 7rem;
 	position: relative;
@@ -1135,9 +1138,9 @@ header {
 	.services-description-ico {
 	  position: absolute;
 	  right: -5rem;
-	  top:30%;
+	  top: 30%;
 	  text-align: center;
-	  border:5px solid #fff;
+	  border: 5px solid #fff;
 	  background: $gradient-dark;
 	  width: 10rem;
 
@@ -1148,106 +1151,108 @@ header {
 	  }
 	}
   }
+}
 
-  .services-services {
-	text-align: center;
-	@include gray-line-mix(48%);
+.services-services {
+  text-align: center;
+  @include gray-line-mix(48%);
 
-	.services-list {
-	  width: 100%;
-	  text-align: center;
-
-	  li {
-		max-width: 15%;
-		display: inline-block;
-		margin: 3rem 4rem;
-		vertical-align: top;
-
-		.services-ico {
-		  display: block;
-		  max-width: 12rem;
-		  margin: 1rem auto;
-		  height: 7rem;
-
-		  img {
-			width: auto;
-			max-height: 100%;
-			max-width: 100%;
-		  }
-		}
-	  }
-	}
-  }
-
-  .services-options {
+  .services-list {
 	width: 100%;
-
-	.services-options-list {
-	  text-align: center;
-	}
+	text-align: center;
 
 	li {
-	  width: 40rem;
+	  max-width: 15%;
 	  display: inline-block;
-	  padding: 2rem 6rem 2rem 4rem;
-	  text-align: left;
-	  @include gray-line-mix(48%);
-	}
+	  margin: 3rem 4rem;
+	  vertical-align: top;
 
-	.services-options-photo {
-	  padding: 0 0 3rem 3rem;
-	  position: relative;
-	  width: 20rem;
-	  margin: 0 auto;
-
-	  .services-options-front {
-		width: 85%;
-		@include back-gradient(auto, auto, 0, 0, $gradient-dark, $gradient-light);
+	  .services-ico {
+		display: block;
+		max-width: 12rem;
+		margin: 1rem auto;
+		height: 7rem;
 
 		img {
-		  max-width: 7.5rem;
-		  margin: 3.5rem 6.5rem;
-		  max-height: 5rem;
-		  height: auto;
 		  width: auto;
+		  max-height: 100%;
+		  max-width: 100%;
 		}
-	  }
-	}
-
-	.description {
-	  margin: 2rem 0;
-	  color: $gray;
-	  position: relative;
-	  display: block;
-	  font-weight: bold;
-	}
-
-	.right-line {
-	  @include arrow(4rem);
-	  margin: .8rem 0 0rem -5rem;
-	}
-
-	.description:hover {
-	  color: $gradient-dark;
-
-	  .right-line, .right-line:after {
-		background: $gradient-dark;
-	  }
-	}
-
-	table {
-	  td:last-child {
-		font-weight: bold;
-		padding-left: 3rem;
-		color: $gradient-light;
-	  }
-
-	  td.minus {
-		color: $gray;
 	  }
 	}
   }
 }
+
+.services-options {
+  width: 100%;
+
+  .services-options-list {
+	text-align: center;
+  }
+
+  li {
+	width: 40rem;
+	display: inline-block;
+	padding: 2rem 6rem 2rem 4rem;
+	text-align: left;
+	@include gray-line-mix(48%);
+  }
+
+  .services-options-photo {
+	padding: 0 0 3rem 3rem;
+	position: relative;
+	width: 20rem;
+	margin: 0 auto;
+
+	.services-options-front {
+	  width: 85%;
+	  @include back-gradient(auto, auto, 0, 0, $gradient-dark, $gradient-light);
+
+	  img {
+		max-width: 7.5rem;
+		margin: 3.5rem 6.5rem;
+		max-height: 5rem;
+		height: auto;
+		width: auto;
+	  }
+	}
+  }
+
+  .description {
+	margin: 2rem 0;
+	color: $gray;
+	position: relative;
+	display: block;
+	font-weight: bold;
+  }
+
+  .right-line {
+	@include arrow(4rem);
+	margin: .8rem 0 0rem -5rem;
+  }
+
+  .description:hover {
+	color: $gradient-dark;
+
+	.right-line, .right-line:after {
+	  background: $gradient-dark;
+	}
+  }
+
+  table {
+	td:last-child {
+	  font-weight: bold;
+	  padding-left: 3rem;
+	  color: $gradient-light;
+	}
+
+	td.minus {
+	  color: $gray;
+	}
+  }
+}
+
+//}
 
 .footer-wrapper {
   background: $gray-light;
