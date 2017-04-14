@@ -13,6 +13,12 @@
   overflow: hidden;
 }
 
+.static {
+  min-width: 116rem;
+  width: 116rem;
+  overflow: auto;
+}
+
 .content {
   margin-top: 16rem;
 }
@@ -56,7 +62,7 @@ a.btn-dark {
 }
 
 .caption {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-weight: normal;
   padding: 2rem 0;
   width: 100%;
@@ -300,24 +306,23 @@ header {
   position: relative;
 
   .slide {
-	//height: 42rem;
-
 	.slider-item:hover {
 	  opacity: 1;
 	}
 
 	.slider-back {
-	  position: relative;
+	  position: absolute;
 	  width: 77%;
 	  padding: 0 0 7rem 5rem;
 	  margin: 0 0 0 auto;
-	  max-height: 500px;
+	  right: 0;
+	  top: 0;
 	}
 
 	.left-line {
 	  @include arrow(3.5rem, left);
-	  top: 60%;
-	  left: -2rem;
+	  top: 50%;
+	  left: -4rem;
 	}
 
 	.right-line {
@@ -326,20 +331,27 @@ header {
 	  left: 5%;
 	}
 
+	.item-txt {
+	  position: relative;
+	}
+
 	.slidet-item-txt {
-	  position: absolute;
+	  position: relative;
 	  top: 15%;
-	  right:5%;
+	  right: 5%;
 	  left: 5%;
 	  z-index: 10;
 	  text-transform: uppercase;
-	  font-size: 6rem;
+	  font-size: 5rem;
 	  color: #000;
 	  font-family: 'Marmelad';
 	  font-weight: 100;
+	  min-height: 40rem;
+	  @include flex-center;
+	  justify-content: flex-start;
 
 	  &:after {
-		@include back-gradient(0%, 3%, -50%, 10%, $gradient-light, $gradient-dark);
+		@include back-gradient(10%, 10%, -50%, 10%, $gradient-light, $gradient-dark);
 		z-index: -1;
 		min-height: 40rem;
 	  }
@@ -887,7 +899,6 @@ header {
   }
 
 }
-
 //---------/index page-----------------
 
 .statpage {
@@ -938,11 +949,10 @@ header {
 
 	td {
 	  width: 50%;
-	  padding: .5rem 2rem;
+	  padding: .5rem 1rem;
 	}
 
 	.table-name {
-	  //color: $gray-light;
 	  @include hover-effect;
 	  border-right: 1px solid $gray-light;
 	  text-align: right;
@@ -1042,14 +1052,9 @@ header {
 	  }
 	}
 
-	.cloud-block {
-	  left: -6rem;
-	  top: 30rem;
-	}
-
-	.cloud-block:hover {
-	  background: url("../site/img/cloud-active.png") center top no-repeat;
-	  background-size: contain;
+	.cloud-block:hover, .coloc-block:hover,
+	.security-block:hover, .it-block:hover,
+	.tv-block:hover {
 	  width: 100%;
 	  height: 145rem;
 	  position: absolute;
@@ -1059,10 +1064,23 @@ header {
 	  right: 0;
 
 	  > div {
-		left: -6rem;
-		top: 30rem;
 		position: absolute;
 		width: 27rem;
+	  }
+	}
+
+	.cloud-block {
+	  left: -6rem;
+	  top: 30rem;
+	}
+
+	.cloud-block:hover {
+	  background: url("../site/img/cloud-active.png") center top no-repeat;
+	  background-size: contain;
+
+	  > div {
+		left: -6rem;
+		top: 30rem;
 	  }
 	}
 
@@ -1074,19 +1092,10 @@ header {
 	.coloc-block:hover {
 	  background: url("../site/img/coloc-active.png") center top no-repeat;
 	  background-size: contain;
-	  width: 100%;
-	  height: 145rem;
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
 
 	  > div {
 		top: 38rem;
 		left: 37rem;
-		position: absolute;
-		width: 27rem;
 	  }
 	}
 
@@ -1098,19 +1107,10 @@ header {
 	.security-block:hover {
 	  background: url("../site/img/security-active.png") center top no-repeat;
 	  background-size: contain;
-	  width: 100%;
-	  height: 145rem;
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
 
 	  > div {
 		right: -11rem;
 		top: 30rem;
-		position: absolute;
-		width: 27rem;
 	  }
 	}
 
@@ -1122,19 +1122,10 @@ header {
 	.it-block:hover {
 	  background: url("../site/img/it-active.png") center top no-repeat;
 	  background-size: contain;
-	  width: 100%;
-	  height: 145rem;
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
 
 	  > div {
 		bottom: 0;
 		left: 13rem;
-		position: absolute;
-		width: 27rem;
 	  }
 	}
 
@@ -1146,19 +1137,10 @@ header {
 	.tv-block:hover {
 	  background: url("../site/img/tv-active.png") center top no-repeat;
 	  background-size: contain;
-	  width: 100%;
-	  height: 145rem;
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
 
 	  > div {
 		bottom: 0;
 		right: 10rem;
-		position: absolute;
-		width: 27rem;
 	  }
 	}
   }
@@ -1370,7 +1352,7 @@ header {
 
 .footer-wrapper {
   background: $gray-light;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
   color: #8C8F94;
 
@@ -1446,13 +1428,14 @@ header {
 	position: relative;
 	margin: 5rem auto;
 	background: linear-gradient(to right, $gradient-dark, $gradient-light);
-	padding: 5rem 3rem 3rem;
+	padding-bottom:3rem;
+	border:2px solid $gradient-dark;
 
 	#close {
 	  position: absolute;
-	  right: 1rem;
+	  right: 0;
 	  cursor: pointer;
-	  top: 1rem;
+	  top: -1rem;
 	  color: #fff;
 	  font-size: 4rem;
 	}
@@ -1462,7 +1445,35 @@ header {
 	  border: 0;
 	  padding: .5rem;
 	  margin-bottom: 1rem;
+
 	}
+
+	.popup-header {
+	  width: 100%;
+	  margin-bottom: 1rem;
+	  font-weight: bold;
+	  color: #fff;
+	  padding: .5rem 1rem;
+	  text-transform: uppercase;
+	  position: relative;
+	  height:3rem;
+	  background-color: $gradient-dark;
+	}
+  }
+}
+
+.pagination {
+  display: block;
+  margin: 1rem auto;
+
+  a {
+	color: $gray;
+	font-size: 1.5rem;
+	padding: .5rem 1rem;
+  }
+
+  a:hover, a.active {
+	color: $gradient-dark;
   }
 }
 
@@ -1640,6 +1651,7 @@ header {
 	  .slider-back {
 		width: 100%;
 		height: 100%;
+		//max-height: 35rem;
 	  }
 
 	  .right-line, .left-line {
@@ -1650,12 +1662,13 @@ header {
 		top: 0;
 		font-size: 3rem;
 		left: 0;
+		justify-content: center;
 		padding: 4rem 4rem 6rem;
 		text-align: center;
 
+
 		&:after {
 		  bottom: 0;
-		  right: 0;
 		  left: 0;
 		}
 	  }
@@ -1671,6 +1684,7 @@ header {
 		top: 50%;
 		width: 6rem;
 		height: 6rem;
+		margin-top: -3rem;
 	  }
 
 	  &.bx-prev {
@@ -1739,35 +1753,6 @@ header {
 }
 
 @media (max-width: 640px) {
-  //header {
-  //.navbar-collapse {
-  //  ul li ul {
-  //	height: auto;
-  //  }
-  //
-  //  ul li ul li {
-  //	float: none;
-  //	width: 100%;
-  //	border-bottom: 1px solid $gray-light;
-  //
-  //	a {
-  //	  border: 0;
-  //	}
-  //  }
-  //
-  //  ul li ul li ul {
-  //	display: none;
-  //	position: relative;
-  //  }
-  //
-  //  ul li ul li:hover > ul {
-  //	display: flex;
-  //	width: 90%;
-  //	margin: auto;
-  //  }
-  //}
-  //}
-
   .video-content {
 	.video-wrap {
 	  height: auto;
@@ -1821,6 +1806,18 @@ header {
 	.statpage-wrap {
 	  margin: 0;
 	}
+
+	.statpage-left {
+	  width:100%;
+	  float: none;
+	  margin: 0 auto;
+	  min-height: inherit;
+	  text-align: center;
+	}
+
+	.statpage-info {
+	  padding: 0 1rem;
+	}
   }
 }
 
@@ -1830,11 +1827,16 @@ header {
 	  .slidet-item-txt {
 		font-size: 2rem;
 		padding: 2rem 2rem 4rem;
+		min-height: 30rem;
 	  }
 	}
 
 	.bx-wrapper .bx-pager.bx-default-pager {
 	  left: 35%;
 	}
+  }
+
+  .statpage .news-list li {
+	width: 100%;
   }
 }
