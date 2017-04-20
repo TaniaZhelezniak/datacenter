@@ -306,7 +306,7 @@ header {
   position: relative;
 
   .slide {
-	.slider-item:hover {
+	.slider-item a:hover {
 	  opacity: 1;
 	}
 
@@ -885,6 +885,7 @@ header {
 	text-align: left;
 	@include flex-center;
 	flex-wrap: nowrap;
+	justify-content: flex-start;
 
 	p {
 	  display: inline-block;
