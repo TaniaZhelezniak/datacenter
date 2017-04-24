@@ -4,7 +4,7 @@ var mainApp = window.mainApp || {};
 
 $(document).ready(function () {
 	$('#top-slider').bxSlider({
-		// auto: true,
+		auto: true,
 		adaptiveHeight: true,
 		mode: 'fade',
 		video: true
@@ -28,9 +28,24 @@ $(document).ready(function () {
 		preloadImages: 'visible',
 		touchEnabled: true,
 		adaptiveHeight: true,
-		pagerCustom: '#certificates-slider-pager', //чтобы заработал переключатель слайдеров при нажатии на миниатюру убрать "-1"
+		pagerCustom: '#certificates-slider-pager' //чтобы заработал переключатель слайдеров при нажатии на миниатюру убрать "-1"
 		// nextText: '<span class="icon"><svg viewBox="0 0 43.323 80" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#arrow-next"></svg></span>',
 		// prevText: '<span class="icon"><svg viewBox="0 0 43.323 80" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#arrow-prev"></svg></span>',
+	});
+
+	$('#partner-slider').bxSlider({
+		minSlides: 5,
+		maxSlides: 5,
+		slideWidth: 250,
+		touchEnabled: true,
+		autoHover: true,
+		auto: true,
+		responsive: true,
+		infiniteLoop: true,
+		moveSlides: 1,
+		pager: false,
+		// nextText: '<span class="icon-nav"><svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-next-svg"></svg></span>',
+		// prevText: '<span class="icon-nav"><svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-prev-svg"></svg></span>',
 	});
 
 	$(document).on('scroll', function() {
@@ -43,7 +58,7 @@ $(document).ready(function () {
 
 	$("#phone-number").mask("+38 (099) 999-9999");
 
-	$('.tour, .tel, .enter').on('click', function() {
+	$('.tour, .tel, .enter, .navbar-ico-call').on('click', function() {
 		$('.overlay-popup').show('slow');
 	});
 

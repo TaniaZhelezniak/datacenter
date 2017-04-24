@@ -99,7 +99,7 @@
 @mixin back-gradient($top, $right, $bottom, $left, $from, $to) {
   background: linear-gradient(to right, $from, $to);
   //width: $width;
-  opacity: .8;
+  opacity: .7;
   content: '';
   z-index: 5;
   position: absolute;
