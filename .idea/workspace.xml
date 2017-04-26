@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="439aa867-5e03-4b73-bbf3-6733ceda10bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/html/colocation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles.css" afterPath="$PROJECT_DIR$/app/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles.min.css" afterPath="$PROJECT_DIR$/app/styles.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/base/index.scss" afterPath="$PROJECT_DIR$/sass/base/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/reset/reset-settings.scss" afterPath="$PROJECT_DIR$/sass/reset/reset-settings.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/html/colocation-list.html" afterPath="$PROJECT_DIR$/site/html/colocation-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/html/index.html" afterPath="$PROJECT_DIR$/site/html/index.html" />
     </list>
     <ignored path="datacenter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,8 +93,8 @@
           <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sass/base/index.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="1558" column="21" selection-start-line="1558" selection-start-column="21" selection-end-line="1558" selection-end-column="21" />
+                <state relative-caret-position="315">
+                  <caret line="1548" column="18" selection-start-line="1548" selection-start-column="18" selection-end-line="1548" selection-end-column="18" />
                   <folding>
                     <element signature="e#468#660#0" expanded="false" />
                     <element signature="e#1183#1397#0" expanded="false" />
@@ -165,24 +160,24 @@
                     <element signature="e#25176#25397#0" expanded="false" />
                     <element signature="e#25455#25994#0" expanded="false" />
                     <element signature="e#26012#26835#0" expanded="false" />
-                    <element signature="e#27650#27811#0" expanded="false" />
-                    <element signature="e#27839#30260#0" expanded="false" />
-                    <element signature="e#30288#31605#0" expanded="false" />
-                    <element signature="e#30697#30732#0" expanded="false" />
-                    <element signature="e#30973#30995#0" expanded="false" />
-                    <element signature="e#31017#31603#0" expanded="false" />
-                    <element signature="e#31633#32426#0" expanded="false" />
-                    <element signature="e#31881#32087#0" expanded="false" />
-                    <element signature="e#32454#32691#0" expanded="false" />
-                    <element signature="e#32470#32642#0" expanded="false" />
-                    <marker date="1493201294254" expanded="true" signature="28093:28854" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28387:28764" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28477:28757" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28571:28751" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28612:28659" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28697:28743" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28793:28849" ph="{...}" />
-                    <marker date="1493201294254" expanded="true" signature="28809:28842" ph="{...}" />
+                    <element signature="e#27638#27799#0" expanded="false" />
+                    <element signature="e#27827#30248#0" expanded="false" />
+                    <element signature="e#30276#31593#0" expanded="false" />
+                    <element signature="e#30685#30720#0" expanded="false" />
+                    <element signature="e#30961#30983#0" expanded="false" />
+                    <element signature="e#31005#31591#0" expanded="false" />
+                    <element signature="e#31621#32414#0" expanded="false" />
+                    <element signature="e#31869#32075#0" expanded="false" />
+                    <element signature="e#32442#32679#0" expanded="false" />
+                    <element signature="e#32458#32630#0" expanded="false" />
+                    <marker date="1493202573546" expanded="true" signature="28081:28842" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28375:28752" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28465:28745" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28559:28739" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28600:28647" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28685:28731" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28781:28837" ph="{...}" />
+                    <marker date="1493202573546" expanded="true" signature="28797:28830" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -497,12 +492,12 @@
       <workItem from="1490859799791" duration="28344000" />
       <workItem from="1491989443729" duration="39649000" />
       <workItem from="1493197912114" duration="31000" />
-      <workItem from="1493198003066" duration="3022000" />
+      <workItem from="1493198003066" duration="3911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244315000" />
+    <option name="totallyTimeSpent" value="245204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2443" y="60" width="1397" height="910" extended-state="0" />
@@ -862,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/base/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="1558" column="21" selection-start-line="1558" selection-start-column="21" selection-end-line="1558" selection-end-column="21" />
+        <state relative-caret-position="315">
+          <caret line="1548" column="18" selection-start-line="1548" selection-start-column="18" selection-end-line="1548" selection-end-column="18" />
           <folding>
             <element signature="e#468#660#0" expanded="false" />
             <element signature="e#1183#1397#0" expanded="false" />
@@ -929,24 +924,24 @@
             <element signature="e#25176#25397#0" expanded="false" />
             <element signature="e#25455#25994#0" expanded="false" />
             <element signature="e#26012#26835#0" expanded="false" />
-            <element signature="e#27650#27811#0" expanded="false" />
-            <element signature="e#27839#30260#0" expanded="false" />
-            <element signature="e#30288#31605#0" expanded="false" />
-            <element signature="e#30697#30732#0" expanded="false" />
-            <element signature="e#30973#30995#0" expanded="false" />
-            <element signature="e#31017#31603#0" expanded="false" />
-            <element signature="e#31633#32426#0" expanded="false" />
-            <element signature="e#31881#32087#0" expanded="false" />
-            <element signature="e#32454#32691#0" expanded="false" />
-            <element signature="e#32470#32642#0" expanded="false" />
-            <marker date="1493201294254" expanded="true" signature="28093:28854" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28387:28764" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28477:28757" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28571:28751" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28612:28659" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28697:28743" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28793:28849" ph="{...}" />
-            <marker date="1493201294254" expanded="true" signature="28809:28842" ph="{...}" />
+            <element signature="e#27638#27799#0" expanded="false" />
+            <element signature="e#27827#30248#0" expanded="false" />
+            <element signature="e#30276#31593#0" expanded="false" />
+            <element signature="e#30685#30720#0" expanded="false" />
+            <element signature="e#30961#30983#0" expanded="false" />
+            <element signature="e#31005#31591#0" expanded="false" />
+            <element signature="e#31621#32414#0" expanded="false" />
+            <element signature="e#31869#32075#0" expanded="false" />
+            <element signature="e#32442#32679#0" expanded="false" />
+            <element signature="e#32458#32630#0" expanded="false" />
+            <marker date="1493202573546" expanded="true" signature="28081:28842" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28375:28752" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28465:28745" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28559:28739" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28600:28647" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28685:28731" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28781:28837" ph="{...}" />
+            <marker date="1493202573546" expanded="true" signature="28797:28830" ph="{...}" />
           </folding>
         </state>
       </provider>
