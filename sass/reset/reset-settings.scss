@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Calibri;
+  src: url(../site/fonts/calibri.ttf);
+}
+
 * {
   box-sizing: border-box;
   font-smoothing: antialiased;
@@ -14,7 +19,7 @@ html {
 }
 
 body, a {
-  font: normal 1.5rem Arial, sans-serif;
+  font: normal 1.7rem Calibri, Arial;
   color: $gray;
 }
 

@@ -69,6 +69,10 @@ a.btn-dark {
   text-transform: uppercase;
 }
 
+.caption-white {
+  color: #fff!important;
+}
+
 body .bx-wrapper {
   border: 0;
   box-shadow: none;
@@ -365,7 +369,6 @@ header {
 	  text-transform: uppercase;
 	  font-size: 5rem;
 	  color: #000;
-	  font-family: 'Marmelad';
 	  font-weight: 100;
 	  min-height: 43rem;
 	  @include flex-center;
@@ -654,7 +657,7 @@ header {
 }
 
 .reasons {
-  padding-bottom: 7rem;
+  padding-bottom: 5rem;
   width: 100%;
   position: relative;
   @include gray-line-mix(50%);
@@ -976,130 +979,7 @@ header {
 
 }
 //---------/index page-----------------
-
-.statpage {
-  width: 100%;
-
-  a {
-	color: $gradient-dark;
-  }
-
-  .statpage-left {
-	width: 30rem;
-	padding: 3rem;
-	float: left;
-	min-height: 100%;
-	margin: 2rem -100% 2rem 0;
-  }
-
-  .statpage-wrap {
-	margin-left: 30rem;
-	visibility: visible;
-  }
-
-  .statpage-list {
-	float: right;
-	width: 100%;
-
-	li {
-	  margin: 1rem;
-	  padding-left: 3rem;
-	  background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTcuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI5NyAyOTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI5NyAyOTc7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMTQ4LjUsMEM2Ni40ODUsMCwwLDY2LjQ4NSwwLDE0OC41UzY2LjQ4NSwyOTcsMTQ4LjUsMjk3UzI5NywyMzAuNTE1LDI5NywxNDguNVMyMzAuNTE1LDAsMTQ4LjUsMHogTTkxLjk3MiwyMzAuMDUxICAgbDMyLjAxNi04MS41MDRMOTEuOTcyLDY2LjQ0OWwxMzEuMDU3LDgxLjM3MUw5MS45NzIsMjMwLjA1MXoiIGZpbGw9IiMwMDQ0ZWIiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) left .3rem no-repeat;
-	}
-  }
-
-  .link-more {
-	display: inline-block;
-	color: #fff;
-  }
-
-  .table-caption {
-	font-size: 2rem;
-	text-align: center;
-  }
-
-  .statpage-table {
-	width: 100%;
-	margin: 2rem 0;
-	border-collapse: collapse;
-
-	td {
-	  width: 50%;
-	  padding: .5rem 1rem;
-	}
-
-	.table-name {
-	  @include hover-effect;
-	  border-right: 1px solid $gray-light;
-	  text-align: right;
-	}
-  }
-
-  .news-list {
-	width: 100%;
-
-	.news-caption {
-	  color: $gray;
-	  padding: 1rem 0;
-
-	}
-
-	li {
-	  width: 45%;
-	  vertical-align: top;
-	  padding-right: 2rem;
-	  margin-bottom: 1rem;
-	  display: inline-block;
-	}
-
-	.preview-news {
-	  display: block;
-	  max-height: 20rem;
-	  margin: .5rem 0;
-	  position: relative;
-	  overflow: hidden;
-	}
-
-	.preview-news:after {
-	  content: '';
-	  display: block;
-	  box-shadow: 0 -5px 55px 25px #fff;
-	  background: #fff;
-	  width: 100%;
-	  position: absolute;
-	  z-index: 100;
-	  bottom: 0;
-	  height: 5px;
-	}
-  }
-
-  .statpage-contacts {
-	h3 {
-	  text-align: center;
-	}
-
-	.contacts-ico {
-	  width: 4rem;
-	  height: 4rem;
-	  float: left;
-	  display: inline-block;
-	}
-  }
-
-  .feedback {
-	input {
-	  width: 100%;
-	  margin-bottom: .5rem;
-	  height: 3rem;
-	}
-
-	textarea {
-	  width: 100%;
-	  resize: vertical;
-	}
-  }
-}
-
+//---------services schema page---------------
 .services-schema {
   width: 950px;
   min-width: 950px;
@@ -1298,40 +1178,134 @@ header {
 	margin: 0;
   }
 }
+//---------/services schema page---------------
 
-.services-name {
-  @include gray-line-mix(48%);
+//---------page in two column ПОДОБНОГО СТИЛЯ В НОВЫХ МАКЕТАХ НЕТ----------------
+.statpage {
+  width: 100%;
 
-  .services-description {
-	max-width: 76.8rem;
-	border: 2px solid $gradient-dark;
-	border-image: linear-gradient(to right, $gradient-dark, $gradient-light) 1;
-	margin: 0 auto;
-	padding: 5rem 7rem;
-	position: relative;
+  a {
+	color: $gradient-dark;
+  }
+
+  .statpage-left {
+	width: 30rem;
+	padding: 3rem;
+	float: left;
+	min-height: 100%;
+	margin: 2rem -100% 2rem 0;
+  }
+
+  .statpage-wrap {
+	margin-left: 30rem;
+	visibility: visible;
+  }
+
+  .statpage-list {
+	float: right;
+	width: 100%;
+
+	li {
+	  margin: 1rem;
+	  padding-left: 3rem;
+	  background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTcuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI5NyAyOTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI5NyAyOTc7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMTQ4LjUsMEM2Ni40ODUsMCwwLDY2LjQ4NSwwLDE0OC41UzY2LjQ4NSwyOTcsMTQ4LjUsMjk3UzI5NywyMzAuNTE1LDI5NywxNDguNVMyMzAuNTE1LDAsMTQ4LjUsMHogTTkxLjk3MiwyMzAuMDUxICAgbDMyLjAxNi04MS41MDRMOTEuOTcyLDY2LjQ0OWwxMzEuMDU3LDgxLjM3MUw5MS45NzIsMjMwLjA1MXoiIGZpbGw9IiMwMDQ0ZWIiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) left .3rem no-repeat;
+	}
+  }
+
+  .link-more {
+	display: inline-block;
+	color: #fff;
+  }
+
+  .table-caption {
 	font-size: 2rem;
+	text-align: center;
+  }
 
-	.caption {
-	  padding: 0;
+  .statpage-table {
+	width: 100%;
+	margin: 2rem 0;
+	border-collapse: collapse;
+
+	td {
+	  width: 50%;
+	  padding: .5rem 1rem;
 	}
 
-	.services-description-ico {
-	  position: absolute;
-	  right: -5rem;
-	  top: 30%;
-	  text-align: center;
-	  border: 5px solid #fff;
-	  background: $gradient-dark;
-	  width: 10rem;
+	.table-name {
+	  @include hover-effect;
+	  border-right: 1px solid $gray-light;
+	  text-align: right;
+	}
+  }
 
-	  img {
-		max-width: 100%;
-		width: auto;
-	  }
+  .news-list {
+	width: 100%;
+
+	.news-caption {
+	  color: $gray;
+	  padding: 1rem 0;
+
+	}
+
+	li {
+	  width: 45%;
+	  vertical-align: top;
+	  padding-right: 2rem;
+	  margin-bottom: 1rem;
+	  display: inline-block;
+	}
+
+	.preview-news {
+	  display: block;
+	  max-height: 20rem;
+	  margin: .5rem 0;
+	  position: relative;
+	  overflow: hidden;
+	}
+
+	.preview-news:after {
+	  content: '';
+	  display: block;
+	  box-shadow: 0 -5px 55px 25px #fff;
+	  background: #fff;
+	  width: 100%;
+	  position: absolute;
+	  z-index: 100;
+	  bottom: 0;
+	  height: 5px;
+	}
+  }
+
+  .statpage-contacts {
+	h3 {
+	  text-align: center;
+	}
+
+	.contacts-ico {
+	  width: 4rem;
+	  height: 4rem;
+	  float: left;
+	  display: inline-block;
+	}
+  }
+
+  .feedback {
+	input {
+	  width: 100%;
+	  margin-bottom: .5rem;
+	  height: 3rem;
+	}
+
+	textarea {
+	  width: 100%;
+	  resize: vertical;
 	}
   }
 }
+//---------/page in two column----------------
 
+//---------colocation page-------------
 .services-services {
   text-align: center;
   @include gray-line-mix(48%);
@@ -1367,14 +1341,14 @@ header {
 
   .services-options-list {
 	text-align: center;
-  }
 
-  li {
-	width: 40rem;
-	display: inline-block;
-	padding: 2rem 6rem 2rem 4rem;
-	text-align: left;
-	@include gray-line-mix(48%);
+	li {
+	  width: 40rem;
+	  display: inline-block;
+	  padding: 2rem 6rem 2rem 4rem;
+	  text-align: left;
+	  @include gray-line-mix(48%);
+	}
   }
 
   .services-options-photo {
@@ -1427,6 +1401,63 @@ header {
 
 	td.minus {
 	  color: $gray;
+	}
+  }
+
+  .option-list-row {
+	li {
+	  width:100%;
+	}
+  }
+}
+
+.coloc-desc {
+  max-width: 798px;
+  margin: 3rem auto;
+  @include gray-line-mix(50%);
+
+  .coloc-desc-cap {
+	margin: 1rem 0;
+	font-weight: bold;
+	display: block;
+  }
+
+  .right-line {
+	@include arrow(4rem);
+	margin-left: -4.5rem;
+  }
+}
+//---------/colocation page-------------
+
+.services-name {
+  @include gray-line-mix(48%);
+
+  .services-description {
+	max-width: 76.8rem;
+	border: 2px solid $gradient-dark;
+	border-image: linear-gradient(to right, $gradient-dark, $gradient-light) 1;
+	margin: 0 auto;
+	padding: 5rem 7rem;
+	position: relative;
+	font-size: 2rem;
+
+	.caption {
+	  padding: 0;
+	}
+
+	.services-description-ico {
+	  position: absolute;
+	  right: -5rem;
+	  top: 30%;
+	  text-align: center;
+	  border: 5px solid #fff;
+	  background: $gradient-dark;
+	  width: 10rem;
+
+	  img {
+		max-width: 100%;
+		width: auto;
+	  }
 	}
   }
 }
@@ -1508,9 +1539,10 @@ header {
 	width: 320px;
 	position: relative;
 	margin: 5rem auto;
-	background: linear-gradient(to right, $gradient-dark, $gradient-light);
+	background: #fff;
 	padding-bottom:3rem;
-	border:2px solid $gradient-dark;
+	text-align: center;
+	overflow: hidden;
 
 	#close {
 	  position: absolute;
@@ -1521,9 +1553,15 @@ header {
 	  font-size: 4rem;
 	}
 
+	label {
+	  padding: 1rem;
+	  width: 100%;
+	  display: block;
+	}
+
 	input {
 	  width: 100%;
-	  border: 0;
+	  border: 1px solid $gray-light;
 	  padding: .5rem;
 	  margin-bottom: 1rem;
 
@@ -1532,13 +1570,11 @@ header {
 	.popup-header {
 	  width: 100%;
 	  margin-bottom: 1rem;
-	  font-weight: bold;
-	  color: #fff;
-	  padding: .5rem 1rem;
+	  padding: 2rem 0 .5rem;
 	  text-transform: uppercase;
 	  position: relative;
-	  height:3rem;
-	  background-color: $gradient-dark;
+	  background-color: #fff;
+	  border-bottom: 1px solid $gray-light;
 	}
   }
 }
