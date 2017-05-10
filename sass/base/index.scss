@@ -751,6 +751,7 @@ header {
 	  width: 100%;
 	  text-align: center;
 	  padding: 3rem 0;
+	  position: relative;
 	  display: flex;
 	  flex-flow: row wrap;
 	  align-items: flex-start;
@@ -789,6 +790,17 @@ header {
 	  color: rgba(0, 68, 235, .8);
 	  -webkit-text-fill-color: rgba(0, 68, 235, .8);
 	  //-webkit-text-stroke: 1px $gradient-light;
+	}
+
+	&:after {
+	  background: url(../site/img/decor.png) left bottom no-repeat;
+	  display: block;
+	  content: '';
+	  width: 9rem;
+	  height: 9rem;
+	  position: absolute;
+	  left: -30px;
+	  bottom: 50px;
 	}
   }
 
