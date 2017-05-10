@@ -3,6 +3,10 @@
 var mainApp = window.mainApp || {};
 
 $(document).ready(function () {
+	$('#select-list-lang img').on('click', function(e) {
+		$('#select-lang img').attr('src', this.src);
+	});
+
 	$('#top-slider').bxSlider({
 		auto: true,
 		adaptiveHeight: true,
@@ -48,13 +52,13 @@ $(document).ready(function () {
 		// prevText: '<span class="icon-nav"><svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-prev-svg"></svg></span>',
 	});
 
-	$(document).on('scroll', function() {
-		if($(window).scrollTop() !== 0) {
-			$('.navbar').addClass('navbar-min');
-		} else {
-			$('.navbar').removeClass('navbar-min');
-		}
-	});
+	// $(document).on('scroll', function() {
+	// 	if($(window).scrollTop() !== 0) {
+	// 		$('.navbar').addClass('navbar-min');
+	// 	} else {
+	// 		$('.navbar').removeClass('navbar-min');
+	// 	}
+	// });
 
 	$("#phone-number").mask("+38 (099) 999-9999");
 

@@ -104,7 +104,7 @@ header {
 }
 
 .logo {
-  max-width: 10rem;
+  max-width: 12rem;
   display: inline-block;
 }
 
@@ -113,8 +113,8 @@ header {
   top: 10%;
   right: 0;
   z-index: 500;
-  width: 4rem;
-  height: 4rem;
+  width: 4.5rem;
+  height: 4.5rem;
   cursor: pointer;
 }
 
@@ -165,9 +165,33 @@ header {
 	}
 
 	li.parent {
+	  position: relative;
+
 	  li {
 		width: auto;
+		border-radius: 50%;
 	  }
+
+	  ul li a {
+		margin: 0;
+		height: 3rem;
+		border: 0;
+		padding: .2rem;
+		width: 3.5rem;
+	  }
+
+	  ul li:hover {
+		background: $gray-dark;
+	  }
+	}
+
+	li > ul {
+	  border-radius: 2rem;
+	  width: auto;
+	  left: .3rem;
+	  top:0;
+	  display: flex;
+	  flex-flow: column nowrap;
 	}
 
 	& > li > a {
@@ -241,6 +265,11 @@ header {
 	  left: 0;
 	  background: $gradient-light;
 	  border-radius: 50%;
+	}
+
+	span.name {
+	  color: $gradient-dark;
+	  text-decoration: underline;
 	}
   }
 
@@ -337,9 +366,8 @@ header {
 
 	.slider-back {
 	  position: absolute;
-	  width: 77%;
-	  padding: 0 0 7rem 5rem;
-	  margin: 0 0 0 auto;
+	  width: 84rem;
+	  height: 45rem;
 	  right: 0;
 	  top: 0;
 	}
@@ -347,37 +375,39 @@ header {
 	.left-line {
 	  @include arrow(3.5rem, left);
 	  top: 50%;
-	  left: -4rem;
+	  left: 1rem;
 	}
 
 	.right-line {
 	  @include arrow(3.5rem, right);
 	  top: 100%;
-	  left: 5%;
+	  left: 10rem;
 	}
 
 	.item-txt {
 	  position: relative;
+	  padding-left: 5rem;
 	}
 
 	.slidet-item-txt {
 	  position: relative;
 	  top: 20%;
-	  right: 5%;
-	  left: 5%;
+	  right: 0;
+	  left: 0;
 	  z-index: 10;
 	  text-transform: uppercase;
 	  font-size: 5rem;
 	  color: #000;
 	  font-weight: 100;
-	  min-height: 43rem;
+	  height: 54rem;
+	  overflow: hidden;
 	  @include flex-center;
 	  justify-content: flex-start;
 
 	  &:after {
-		@include back-gradient(10%, 10%, -50%, 10%, $gradient-light, $gradient-dark);
+		@include back-gradient(9rem, 10rem, -50%, 20rem, $gradient-light, $gradient-dark);
 		z-index: -1;
-		min-height: 40rem;
+		height: 45rem;
 	  }
 	}
   }
@@ -465,42 +495,55 @@ header {
 
 	li {
 	  margin: .6rem;
+	  overflow: hidden;
+	  display: inline-block;
 	}
 
 	.btn-more {
 	  text-align: right;
 	}
 
+	img {
+	  -moz-transition: -moz-transform 1s ease-out;
+	  -o-transition: -o-transform 1s ease-out;
+	  -webkit-transition: -webkit-transform 1s ease-out;
+	  transition: transform 1s ease-out;
+	}
+
 	img:hover {
-	  -webkit-transform: scale(1.3);
-	  -ms-transform: scale(1.3);
-	  transform: scale(1.3);
+	  -webkit-transform: scale(1.2);
+	  -ms-transform: scale(1.2);
+	  transform: scale(1.2);
 	}
   }
 
   .main-gallery-l {
 	text-align: right;
 
-	li:first-child img {
+	li:first-child {
 	  width: 34.1rem;
 	  height: 28.9rem;
 	}
 
-	li:nth-child(2) img {
+	li:nth-child(2) {
 	  width: 23.9rem;
 	  height: 16.6rem;
+	}
+
+	li:last-child {
+	  display: block;
 	}
   }
 
   .main-gallery-r {
 	text-align: left;
 
-	li:first-child img {
+	li:first-child {
 	  width: 45rem;
 	  height: 34.3rem;
 	}
 
-	li:last-child img {
+	li:last-child {
 	  width: 21.1rem;
 	  height: 16.3rem;
 	}
@@ -599,6 +642,7 @@ header {
 	  height: 3rem;
 	  background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM1LjQxNCAzNS40MTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM1LjQxNCAzNS40MTQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8Zz4KCQk8cG9seWdvbiBwb2ludHM9IjI3LjA1MSwxNyA5LjkwNSwwIDguNDE3LDEuNDE0IDI0LjY3NCwxNy43MDcgOC4zNjMsMzQgOS45MTQsMzUuNDE0IDI3LjA1MSwxOC40MTQgICAiIGZpbGw9IiNjYWM5Y2EiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) center no-repeat;
 	  background-size: contain;
+	  z-index: 50;
 	}
 
 	&.bx-prev {
@@ -663,7 +707,7 @@ header {
 }
 
 .reasons {
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   width: 100%;
   position: relative;
   @include gray-line-mix(50%);
@@ -672,10 +716,10 @@ header {
 	content: '';
 	display: block;
 	position: absolute;
-	bottom: 7rem;
+	bottom: 8rem;
 	left: 0;
 	right: 6%;
-	top: 12%;
+	top: 5rem;
 	z-index: 5;
 	background: $gray-light;
   }
@@ -685,7 +729,8 @@ header {
 	z-index: 10;
 	padding: 2rem 0;
 	color: #fff;
-	width: 94%;
+	width: 112.5rem;
+	height: 50rem;
 	margin: 0 0 0 auto;
 	background: rgba(0, 68, 235, .8);
 
@@ -715,18 +760,16 @@ header {
 		text-align: left;
 		max-width: 30rem;
 		position: relative;
-		padding: 0 5rem 0 5rem;
+		padding: 0 1rem;
 		display: inline-block;
-		font-weight: bold;
-		margin: 1rem 0 1rem 5rem;
+		margin: 2rem;
 		font-size: 1.7rem;
 	  }
 
 	  .right-line {
-		@include arrow(8rem);
+		@include arrow(5rem);
 		position: relative;
-		float: left;
-		margin: 1rem -2rem;
+		margin: 0;
 	  }
 	}
 
@@ -737,8 +780,10 @@ header {
 	}
 
 	.number {
-	  position: absolute;
-	  left: 0;
+	  float: left;
+	  font-family:Astoria;
+	  margin-right: 2rem;
+	  position: relative;
 	  font-size: 8rem;
 	  text-shadow: -1px -1px 0 $gradient-light, 1px -1px 0 $gradient-light, -1px 1px 0 $gradient-light, 1px 1px 0 $gradient-light;
 	  color: rgba(0, 68, 235, .8);
@@ -748,7 +793,7 @@ header {
   }
 
   .gray-line {
-	bottom: -6rem;
+	bottom: -1rem;
 	z-index: 10;
   }
 }
@@ -899,9 +944,9 @@ header {
 
   .bx-wrapper .bx-pager {
 	bottom: auto;
-	top: 49%;
+	top: 50%;
 	width: auto;
-	right: -15%;
+	right: -14.8%;
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a {
@@ -912,8 +957,8 @@ header {
 	background: transparent;
 	border: 2px solid #0044EB;
 	border-radius: 50%;
-	width: 3rem;
-	height: 3rem;
+	width: 2.5rem;
+	height: 2.5rem;
 	display: block;
   }
 
@@ -973,6 +1018,7 @@ header {
 
 	p {
 	  display: inline-block;
+	  margin: .2rem 0;
 	}
 
 	.news-time {
@@ -1011,12 +1057,13 @@ header {
 
 	  .services-photo {
 		padding: 0;
-		transition: all .5s ease-out .2s;
+		transition: all .2s ease-out .2s;
 	  }
 
 	  .services-photo-back, .services-photo-front {
 		width: 20rem;
-		height: 14rem;
+		height: 15rem;
+		transition: all .2s ease-out .2s;
 	  }
 	}
 
