@@ -1426,6 +1426,18 @@ header {
 	}
   }
 
+  .services-options-list > li:hover {
+	.services-options-back, .services-options-front {
+	  width: 20rem;
+	  height: 15.7rem;
+	  transition: all .1s ease-out 0s;
+	}
+
+	.services-options-photo {
+	  padding: 0;
+	}
+  }
+
   .services-options-photo {
 	padding: 0 0 3rem 3rem;
 	position: relative;
