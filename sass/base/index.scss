@@ -495,6 +495,8 @@ header {
 	ul {
 	  width: 50%;
 	  float: left;
+	  padding: 0;
+	  list-style: none;
 	}
 
 	li {
@@ -1215,6 +1217,9 @@ header {
   }
 
   .schema-list {
+	padding: 0;
+	list-style: none;
+
 	li {
 	  padding: 1rem 0;
 	  display: flex;
