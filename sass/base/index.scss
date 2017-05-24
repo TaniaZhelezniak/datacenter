@@ -206,6 +206,8 @@ header {
   ul {
 	//position: relative;
 	//right: 50%;
+	margin-bottom: 0;
+	padding:0;
   }
 
   ul li {
@@ -807,6 +809,10 @@ header {
 	  position: absolute;
 	  left: -30px;
 	  bottom: 50px;
+	}
+
+	li:first-child .number, li:nth-child(2) .number {
+		font-size: 9.5rem;
 	}
   }
 
